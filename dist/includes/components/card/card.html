@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Превью карточки товара</title>
+    <!--Минимум обнуляющих стилей, обычно они изначально есть на сайтах-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        button {
+            cursor: pointer;
+            outline: none;
+            background: transparent;
+        }
+
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            -moz-appearance: textfield;
+        }
+
+        input {
+            outline: none;
+        }
+
+        input[type=number],
+        input[type=number]:hover,
+        input[type=number]:focus {
+            -webkit-appearance: none;
+            appearance: none;
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Демонстрационный блок с инлайн стилями, он вам не нужен-->
+    <div
+        style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1440px; margin: 100px auto;">
+        <div class="card">
+            <!--Верхняя часть карточки - изображение-->
+            <a class="card__head" href="#">
+                <img src="demo.png" alt="">
+            </a>
+            <!--Контентная часть карточки-->
+            <div class="card__body">
+                <div class="card__articule">Арт. - name</div>
+                <a class="card__name" href="#">Название товара</a>
+            </div>
+            <!--Часть котороая будет прижата к нижнему краю-->
+            <div class="card__footer">
+                <div class="card__price">
+                    <p>Цена за шт.</p>
+                    <div class="card__price-box">
+                        <span class="card__current">3 070 ₽</span>
+                    </div>
+                </div>
+                <div class="card__controls">
+                    <div class="counter jsCounterParent">
+                        <button class="counter__btn jsDecrease">
+                            <svg width="15" height="2" viewBox="0 0 15 2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line y1="1" x2="15" y2="1" stroke="#1974BF" stroke-width="2"></line>
+                            </svg>
+                        </button>
+                        <!--Атрибут max у инпута - для ограничения количества товара, который можно положить в корзину-->
+                        <input class="counter__input jsCounterInput" type="number" value="1" max="99">
+                        <button class="counter__btn jsIncrease">
+                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line y1="7" x2="16" y2="7" stroke="#1974BF" stroke-width="2"></line>
+                                <line x1="8" y1="14" x2="8" stroke="#1974BF" stroke-width="2"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="btn">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../js/jquery-3.6.1.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
