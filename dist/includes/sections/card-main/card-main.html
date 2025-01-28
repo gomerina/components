@@ -1,159 +1,446 @@
-<div class="card-main">
-	<div class="card-sliders">
-		<div class="vertical-slider-box">
-			<div class="vertical-slider swiper">
-				<div class="swiper-wrapper">
-					<div class="vertical-slider__item swiper-slide">
-						<picture>
-							<source srcset="img/webp/categories-1@x2.webp" type="image/webp" />
-							<img src="img/categories-1@x2.jpg" alt="" />
-						</picture>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../components/card/style.css">
+	<link rel="stylesheet" href="../../../css/fancybox.css">
+	<link rel="stylesheet" href="../../../css/swiper.css">
+	<link rel="stylesheet" href="../../UI/counter/style.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Карточка товара</title>
+	<!--Минимум обнуляющих стилей, обычно они изначально есть на сайтах-->
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		img {
+			max-width: 100%;
+			vertical-align: middle;
+		}
+
+		button {
+			cursor: pointer;
+			outline: none;
+			background: transparent;
+		}
+
+		input[type=number]::-webkit-outer-spin-button,
+		input[type=number]::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			appearance: none;
+			-moz-appearance: textfield;
+		}
+
+		input {
+			outline: none;
+			border: none;
+		}
+
+		input[type=number],
+		input[type=number]:hover,
+		input[type=number]:focus {
+			-webkit-appearance: none;
+			appearance: none;
+			-moz-appearance: textfield;
+		}
+	</style>
+	<!--Стили контейнеров для демонстрации-->
+	<style>
+		.container {
+			max-width: 1440px;
+			margin: 0 auto;
+			padding: 0 30px;
+		}
+
+		.wrapper {
+			padding: 100px 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div class="card-main">
+				<div class="card-sliders">
+					<div class="vertical-slider-box">
+						<button class="vertical-prev">
+							<svg width="23" height="12" viewBox="0 0 23 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M22 2.00012L11.1794 9.96194L0.959962 2.00012" stroke="#40444B"
+									stroke-width="3" />
+							</svg>
+						</button>
+						<div class="vertical-slider swiper">
+							<div class="swiper-wrapper">
+								<div class="vertical-slider__item swiper-slide">
+									<img src="demo.png" alt="" />
+								</div>
+								<div class="vertical-slider__item swiper-slide">
+									<img src="demo.png" alt="" />
+								</div>
+								<div class="vertical-slider__item swiper-slide">
+									<img src="demo.png" alt="" />
+								</div>
+								<div class="vertical-slider__item swiper-slide">
+									<img src="demo.png" alt="" />
+								</div>
+								<div class="vertical-slider__item swiper-slide">
+									<img src="demo.png" alt="" />
+								</div>
+								<div class="vertical-slider__item swiper-slide">
+									<img src="demo.png" alt="" />
+								</div>
+							</div>
+						</div>
+						<button class="vertical-next">
+							<svg width="23" height="12" viewBox="0 0 23 12" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M22 2.00012L11.1794 9.96194L0.959962 2.00012" stroke="#40444B"
+									stroke-width="3" />
+							</svg>
+						</button>
 					</div>
-					<div class="vertical-slider__item swiper-slide">
-						<picture>
-							<source srcset="img/webp/categories-2@x2.webp" type="image/webp" />
-							<img src="img/categories-2@x2.jpg" alt="" />
-						</picture>
+					<div class="big-slider swiper">
+						<div class="swiper-wrapper">
+							<a class="big-slider__item swiper-slide" href="demo.png" data-fancybox="big-card">
+								<img src="demo.png" alt="" />
+							</a>
+							<a class="big-slider__item swiper-slide" href="img/big-card.jpg" data-fancybox="big-card">
+								<img src="demo.png" alt="" />
+							</a>
+							<a class="big-slider__item swiper-slide" href="img/big-card.jpg" data-fancybox="big-card">
+								<img src="demo.png" alt="" />
+							</a>
+							<a class="big-slider__item swiper-slide" href="img/big-card.jpg" data-fancybox="big-card">
+								<img src="demo.png" alt="" />
+							</a>
+							<a class="big-slider__item swiper-slide" href="img/big-card.jpg" data-fancybox="big-card">
+								<img src="demo.png" alt="" />
+							</a>
+							<a class="big-slider__item swiper-slide" href="img/big-card.jpg" data-fancybox="big-card">
+								<img src="demo.png" alt="" />
+							</a>
+						</div>
+						<div class="swiper-pagination"></div>
 					</div>
-					<div class="vertical-slider__item swiper-slide">
-						<picture>
-							<source srcset="img/webp/categories-3@x2.webp" type="image/webp" />
-							<img src="img/categories-3@x2.jpg" alt="" />
-						</picture>
+				</div>
+				<div class="card-content">
+					<div class="card-content__price">
+						<span class="card__current">15 000 ₽</span>
+						<div class="card-content__available">
+							<div class="card-content__available-item success">
+								<span>Товар в наличии</span>
+								<svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path d="M2.5 8.125L5.625 11.25L12.5 4.375" stroke="#159A19"
+										stroke-linecap="square" />
+								</svg>
+							</div>
+							<div class="card-content__available-item fail">
+								<span>Товара нет в наличии</span>
+							</div>
+						</div>
 					</div>
-					<div class="vertical-slider__item swiper-slide">
-						<picture>
-							<source srcset="img/webp/categories-4@x2.webp" type="image/webp" />
-							<img src="img/categories-4@x2.jpg" alt="" />
-						</picture>
+					<div class="card__articule">Арт.: КШ.Ф.П.040.40-01 </div>
+					<div class="card__controls">
+						<div class="counter jsCounterParent">
+							<button class="counter__btn jsDecrease">
+								<svg width="15" height="2" viewBox="0 0 15 2" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<line y1="1" x2="15" y2="1" stroke="#1974BF" stroke-width="2" />
+								</svg>
+							</button>
+							<input class="counter__input jsCounterInput" type="number" value="1" max="99" />
+							<button class="counter__btn jsIncrease">
+								<svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<line y1="7" x2="16" y2="7" stroke="#1974BF" stroke-width="2" />
+									<line x1="8" y1="14" x2="8" stroke="#1974BF" stroke-width="2" />
+								</svg>
+							</button>
+						</div>
+						<button class="btn">В корзину</button>
 					</div>
-					<div class="vertical-slider__item swiper-slide">
-						<picture>
-							<source srcset="img/webp/categories-5@x2.webp" type="image/webp" />
-							<img src="img/categories-5@x2.jpg" alt="" />
-						</picture>
+					<table class="card-content__table">
+						<tr>
+							<td>Бренд</td>
+							<td>Aquasfera</td>
+						</tr>
+						<tr>
+							<td>Инженерная система</td>
+							<td>Водоснабжение, Отопление, Тепловые пункты</td>
+						</tr>
+						<tr>
+							<td>Тип присоединения</td>
+							<td>внутренняя резьба</td>
+						</tr>
+						<tr>
+							<td>Тип затвора</td>
+							<td>рычаг</td>
+						</tr>
+						<tr>
+							<td>Цвет ручки/бабочки</td>
+							<td>белый</td>
+						</tr>
+						<tr>
+							<td>Тип прохода</td>
+							<td>полнопроходной</td>
+						</tr>
+						<tr>
+							<td>Тип</td>
+							<td>шаровой</td>
+						</tr>
+					</table>
+					<a class="card-content__btn jsAllChars" href="#cardTabs">
+						<u>Все характеристики</u>
+					</a>
+				</div>
+			</div>
+			<div class="card-tabs jsTabParent" id="cardTabs">
+				<div class="card-tabs__head jsScrollParent">
+					<button class="card-tabs__head-item jsTabHead active">Описание</button>
+					<button class="card-tabs__head-item jsTabHead" id="charsTabHead">Характеристики</button>
+					<button class="card-tabs__head-item jsTabHead">Варианты товара</button>
+					<button class="card-tabs__head-item jsTabHead">Документация</button>
+				</div>
+				<div class="card-tabs__wrapper">
+					<div class="card-tabs__body active jsTabBody">
+						<div class="card-tabs__body-content textpage">
+							<p>Описание и фото товара, технические характеристики, информация о комплекте поставки,
+								габаритах, внешнем виде и цвете, стране производства, а также сертификаты и паспорта
+								носят справочный характер и основываются на последних доступных сведениях от
+								производителя. Производитель оставляет за собой право изменить параметры без
+								предварительного уведомления продавца. Предложение не является публичной офертой.р</p>
+						</div>
 					</div>
-					<div class="vertical-slider__item swiper-slide">
-						<picture>
-							<source srcset="img/webp/categories-6@x2.webp" type="image/webp" />
-							<img src="img/categories-6@x2.jpg" alt="" />
-						</picture>
+					<div class="card-tabs__body jsTabBody" id="charsTabBody">
+						<div class="card-tabs__body-content textpage">
+							<ul>
+								<li>Характеристика 1</li>
+								<li>Характеристика 2</li>
+								<li>Характеристика 3</li>
+								<li>Характеристика 4</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card-tabs__body jsTabBody">
+						<div class="sales__box swiper">
+							<div class="swiper-wrapper">
+								<div class="card swiper-slide">
+									<a class="card__head" href="#">
+										<picture>
+											<source srcset="img/webp/pc@x2.webp" type="image/webp" />
+											<img src="img/pc@x2.jpg" alt="" />
+										</picture>
+										<div class="card__flags">
+											<div class="card__flags-item new">Новинка </div>
+										</div>
+									</a>
+									<div class="card__body">
+										<div class="card__articule">Арт. - КШ.Ф.П.040.40-01</div>
+										<a class="card__name" href="#">Кран шаровой ALSO КШФП Ду 40 Ру 4,0 МПа
+											СТ.20 полнопроходной</a>
+									</div>
+									<div class="card__footer">
+										<div class="card__price">
+											<p>Цена за шт.</p>
+											<div class="card__price-box">
+												<span class="card__current">3 070 ₽</span>
+											</div>
+										</div>
+										<div class="card__controls">
+											<div class="counter jsCounterParent">
+												<button class="counter__btn jsDecrease">
+													<svg width="15" height="2" viewBox="0 0 15 2" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<line y1="1" x2="15" y2="1" stroke="#1974BF" stroke-width="2" />
+													</svg>
+												</button>
+												<input class="counter__input jsCounterInput" type="number" value="1"
+													max="99" />
+												<button class="counter__btn jsIncrease">
+													<svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<line y1="7" x2="16" y2="7" stroke="#1974BF" stroke-width="2" />
+														<line x1="8" y1="14" x2="8" stroke="#1974BF" stroke-width="2" />
+													</svg>
+												</button>
+											</div>
+											<button class="btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="card swiper-slide">
+									<a class="card__head" href="#">
+										<picture>
+											<source srcset="img/webp/pc@x2.webp" type="image/webp" />
+											<img src="img/pc@x2.jpg" alt="" />
+										</picture>
+										<div class="card__flags">
+											<div class="card__flags-item hit">Хит продаж</div>
+										</div>
+									</a>
+									<div class="card__body">
+										<div class="card__articule">Арт. - КШ.Ф.П.040.40-01</div>
+										<a class="card__name" href="#">Кран шаровой ALSO КШФП Ду 40 Ру 4,0 МПа
+											СТ.20 полнопроходной</a>
+									</div>
+									<div class="card__footer">
+										<div class="card__price">
+											<p>Цена за шт.</p>
+											<div class="card__price-box">
+												<span class="card__current">3 070 ₽</span>
+											</div>
+										</div>
+										<div class="card__controls">
+											<div class="counter jsCounterParent">
+												<button class="counter__btn jsDecrease">
+													<svg width="15" height="2" viewBox="0 0 15 2" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<line y1="1" x2="15" y2="1" stroke="#1974BF" stroke-width="2" />
+													</svg>
+												</button>
+												<input class="counter__input jsCounterInput" type="number" value="1"
+													max="99" />
+												<button class="counter__btn jsIncrease">
+													<svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<line y1="7" x2="16" y2="7" stroke="#1974BF" stroke-width="2" />
+														<line x1="8" y1="14" x2="8" stroke="#1974BF" stroke-width="2" />
+													</svg>
+												</button>
+											</div>
+											<button class="btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="card swiper-slide">
+									<a class="card__head" href="#">
+										<picture>
+											<source srcset="img/webp/pc@x2.webp" type="image/webp" />
+											<img src="img/pc@x2.jpg" alt="" />
+										</picture>
+									</a>
+									<div class="card__body">
+										<div class="card__articule">Арт. - КШ.Ф.П.040.40-01</div>
+										<a class="card__name" href="#">Кран шаровой ALSO КШФП Ду 40 Ру 4,0 МПа
+											СТ.20 полнопроходной</a>
+									</div>
+									<div class="card__footer">
+										<div class="card__price">
+											<p>Цена за шт.</p>
+											<div class="card__price-box">
+												<span class="card__current">3 070 ₽</span>
+											</div>
+										</div>
+										<div class="card__controls">
+											<div class="counter jsCounterParent">
+												<button class="counter__btn jsDecrease">
+													<svg width="15" height="2" viewBox="0 0 15 2" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<line y1="1" x2="15" y2="1" stroke="#1974BF" stroke-width="2" />
+													</svg>
+												</button>
+												<input class="counter__input jsCounterInput" type="number" value="1"
+													max="99" />
+												<button class="counter__btn jsIncrease">
+													<svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<line y1="7" x2="16" y2="7" stroke="#1974BF" stroke-width="2" />
+														<line x1="8" y1="14" x2="8" stroke="#1974BF" stroke-width="2" />
+													</svg>
+												</button>
+											</div>
+											<button class="btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+								<div class="card swiper-slide">
+									<a class="card__head" href="#">
+										<picture>
+											<source srcset="img/webp/pc@x2.webp" type="image/webp" />
+											<img src="img/pc@x2.jpg" alt="" />
+										</picture>
+									</a>
+									<div class="card__body">
+										<div class="card__articule">Арт. - КШ.Ф.П.040.40-01</div>
+										<a class="card__name" href="#">Кран шаровой ALSO КШФП Ду 40 Ру 4,0 МПа
+											СТ.20 полнопроходной</a>
+									</div>
+									<div class="card__footer">
+										<div class="card__price">
+											<p>Цена за шт.</p>
+											<div class="card__price-box">
+												<span class="card__current">3 070 ₽</span>
+											</div>
+										</div>
+										<div class="card__controls">
+											<div class="counter jsCounterParent">
+												<button class="counter__btn jsDecrease">
+													<svg width="15" height="2" viewBox="0 0 15 2" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<line y1="1" x2="15" y2="1" stroke="#1974BF" stroke-width="2" />
+													</svg>
+												</button>
+												<input class="counter__input jsCounterInput" type="number" value="1"
+													max="99" />
+												<button class="counter__btn jsIncrease">
+													<svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<line y1="7" x2="16" y2="7" stroke="#1974BF" stroke-width="2" />
+														<line x1="8" y1="14" x2="8" stroke="#1974BF" stroke-width="2" />
+													</svg>
+												</button>
+											</div>
+											<button class="btn">В корзину</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sales__controls">
+							<div class="swiper-button-prev">
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<line x1="8.53033" y1="0.53033" x2="1.25073" y2="7.80993" stroke="black"
+										stroke-width="1.5" />
+									<line y1="-0.75" x2="10.2949" y2="-0.75"
+										transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 8 14.9993)"
+										stroke="black" stroke-width="1.5" />
+								</svg>
+							</div>
+							<div class="swiper-button-next">
+								<svg width="10" height="15" viewBox="0 0 10 15" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<line x1="1.46967" y1="14.4697" x2="8.74927" y2="7.19007" stroke="black"
+										stroke-width="1.5" />
+									<line y1="-0.75" x2="10.2949" y2="-0.75"
+										transform="matrix(0.707107 0.707107 0.707107 -0.707107 2 0.000732422)"
+										stroke="black" stroke-width="1.5" />
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="card-tabs__body jsTabBody">
+						<div class="card-tabs__body-content">
+							<p>Для реализации данного таба нужен дизайн</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<button class="vertical-next">
-				<svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M22 2.00012L11.1794 9.96194L0.959962 2.00012" stroke="#40444B" stroke-width="3" />
-				</svg>
-			</button>
-		</div>
-		<div class="big-slider swiper">
-			<div class="swiper-wrapper">
-				<a class="big-slider__item swiper-slide" href="img/big-card.jpg" data-fancybox="big-card">
-					<picture>
-						<source srcset="img/webp/big-card.webp" type="image/webp" />
-						<img src="img/big-card.jpg" alt="" />
-					</picture>
-				</a>
-				<a class="big-slider__item swiper-slide" href="img/big-card.jpg" data-fancybox="big-card">
-					<picture>
-						<source srcset="img/webp/big-card.webp" type="image/webp" />
-						<img src="img/big-card.jpg" alt="" />
-					</picture>
-				</a>
-				<a class="big-slider__item swiper-slide" href="img/big-card.jpg" data-fancybox="big-card">
-					<picture>
-						<source srcset="img/webp/big-card.webp" type="image/webp" />
-						<img src="img/big-card.jpg" alt="" />
-					</picture>
-				</a>
-				<a class="big-slider__item swiper-slide" href="img/big-card.jpg" data-fancybox="big-card">
-					<picture>
-						<source srcset="img/webp/big-card.webp" type="image/webp" />
-						<img src="img/big-card.jpg" alt="" />
-					</picture>
-				</a>
-				<a class="big-slider__item swiper-slide" href="img/big-card.jpg" data-fancybox="big-card">
-					<picture>
-						<source srcset="img/webp/big-card.webp" type="image/webp" />
-						<img src="img/big-card.jpg" alt="" />
-					</picture>
-				</a>
-				<a class="big-slider__item swiper-slide" href="img/big-card.jpg" data-fancybox="big-card">
-					<picture>
-						<source srcset="img/webp/big-card.webp" type="image/webp" />
-						<img src="img/big-card.jpg" alt="" />
-					</picture>
-				</a>
-			</div>
-			<div class="swiper-pagination"></div>
 		</div>
 	</div>
-	<div class="card-content">
-		<div class="card-content__price">
-			<span class="product-card__current">15 000 ₽</span>
-			<div class="card-content__available">
-				<div class="card-content__available-item success">
-					<span>Товар в наличии</span>
-					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M2.5 8.125L5.625 11.25L12.5 4.375" stroke="#159A19" stroke-linecap="square" />
-					</svg>
-				</div>
-				<div class="card-content__available-item fail">
-					<span>Товара нет в наличии</span>
-				</div>
-			</div>
-		</div>
-		<div class="product-card__articule">Арт.: КШ.Ф.П.040.40-01 </div>
-		<div class="product-card__controls">
-			<div class="counter jsCounterParent">
-				<button class="counter__btn jsDecrease">
-					<svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line y1="1" x2="15" y2="1" stroke="#1974BF" stroke-width="2" />
-					</svg>
-				</button>
-				<input class="counter__input jsCounterInput" type="number" value="1" max="99" />
-				<button class="counter__btn jsIncrease">
-					<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line y1="7" x2="16" y2="7" stroke="#1974BF" stroke-width="2" />
-						<line x1="8" y1="14" x2="8" stroke="#1974BF" stroke-width="2" />
-					</svg>
-				</button>
-			</div>
-			<button class="btn">В корзину</button>
-		</div>
-		<table class="card-content__table">
-			<tr>
-				<td>Бренд</td>
-				<td>Aquasfera</td>
-			</tr>
-			<tr>
-				<td>Инженерная система</td>
-				<td>Водоснабжение, Отопление, Тепловые пункты</td>
-			</tr>
-			<tr>
-				<td>Тип присоединения</td>
-				<td>внутренняя резьба</td>
-			</tr>
-			<tr>
-				<td>Тип затвора</td>
-				<td>рычаг</td>
-			</tr>
-			<tr>
-				<td>Цвет ручки/бабочки</td>
-				<td>белый</td>
-			</tr>
-			<tr>
-				<td>Тип прохода</td>
-				<td>полнопроходной</td>
-			</tr>
-			<tr>
-				<td>Тип</td>
-				<td>шаровой</td>
-			</tr>
-		</table>
-		<a class="card-content__btn jsAllChars" href="#cardTabs">
-			<u>Все характеристики</u>
-		</a>
-	</div>
-</div>
+	<script src="../../../js/jquery-3.6.1.js"></script>
+	<script src="../../../js/fancybox.js"></script>
+	<script src="../../../js/swiper.js"></script>
+	<script src="../../UI/counter/script.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
