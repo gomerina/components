@@ -34,6 +34,7 @@
 
         input {
             outline: none;
+            border: none;
         }
 
         input[type=number],
@@ -54,13 +55,16 @@
             <!--Верхняя часть карточки - изображение-->
             <a class="card__head" href="#">
                 <img src="demo.png" alt="">
+                <div class="card__flags">
+                    <div class="card__flags-item new">Новинка </div>
+                </div>
             </a>
             <!--Контентная часть карточки-->
             <div class="card__body">
                 <div class="card__articule">Арт. - name</div>
                 <a class="card__name" href="#">Название товара</a>
             </div>
-            <!--Часть котороая будет прижата к нижнему краю-->
+            <!--Часть которая будет прижата к нижнему краю-->
             <div class="card__footer">
                 <div class="card__price">
                     <p>Цена за шт.</p>

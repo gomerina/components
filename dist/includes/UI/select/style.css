@@ -9,6 +9,9 @@
   padding: 0 25px 0 0;
   width: 160px;
 }
+.jq-selectbox__select-text {
+  width: auto !important;
+}
 .jq-selectbox.opened .jq-selectbox__trigger {
   -webkit-transform: rotate(-180deg) translateY(-2px);
   -ms-transform: rotate(-180deg) translateY(-2px);
@@ -17,7 +20,7 @@
 .jq-selectbox__trigger {
   width: 10px;
   border-left: none;
-  background: url(../img/svg/select-chev.svg) no-repeat center;
+  background: url(select-chev.svg) no-repeat center;
 }
 .jq-selectbox__trigger-arrow {
   display: none;

@@ -29,26 +29,30 @@
   position: relative;
   padding: 0 0 0 28px;
   display: inline-block;
+  user-select: none;
 }
-.control-checkbox__text::before, .control-checkbox__text::after {
+/* Квадратик */
+.control-checkbox__text::before {
   content: "";
   width: 18px;
   height: 18px;
   position: absolute;
-  top: 1px;
+  top: -1px;
   left: 0;
-}
-.control-checkbox__text::before {
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
+/* Галочка */
 .control-checkbox__text::after {
-  background: url(../img/svg/checkbox.svg) no-repeat;
-  background-size: 100% 100%;
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 9px;
+  height: 5px;
+  transform: rotate(135deg);
+  border: 1px solid black;
+  border-width: 1px 1px 0 0;
   opacity: 0;
-}
-.control-checkbox__value {
-  opacity: 0.7;
-  font-size: 12px;
-  line-height: normal;
-  color: #3a3f48;
+  /* Если нужно задать плавность появления - добавить transition */
+  /* transition: .3s ease */
 }

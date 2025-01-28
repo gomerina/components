@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Радио</title>
+    <!--Минимум обнуляющих стилей, обычно они изначально есть на сайтах-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        button {
+            cursor: pointer;
+            outline: none;
+            background: transparent;
+        }
+
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            -moz-appearance: textfield;
+        }
+
+        input {
+            outline: none;
+            border: none;
+        }
+
+        input[type=number],
+        input[type=number]:hover,
+        input[type=number]:focus {
+            -webkit-appearance: none;
+            appearance: none;
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Демонстрационный блок с инлайн стилями, он вам не нужен-->
+    <div style="max-width: 1440px; margin: 100px auto;">
+        <label class="control-radio">
+            <input class="control-radio__input" type="radio" name="radio">
+            <span class="control-radio__text">Я согласен(на) с условием обработки <a href="#">персональных данных</a>
+            </span>
+        </label>
+        <label class="control-radio">
+            <input class="control-radio__input" type="radio" name="radio">
+            <span class="control-radio__text">Я согласен(на) с условием обработки <a href="#">персональных данных</a>
+            </span>
+        </label>
+    </div>
+</body>
+
+</html>

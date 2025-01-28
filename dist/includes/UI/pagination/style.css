@@ -9,6 +9,7 @@
   font-size: 16px;
   line-height: normal;
   margin: 30px 0 0 0;
+  padding: 0;
 }
 .pagination__link, .pagination__dots {
   -webkit-transition: 0.3s ease-in-out;
@@ -26,6 +27,8 @@
   align-items: center;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  color: black;
 }
 .pagination__item.current {
   -webkit-user-select: none;
@@ -46,7 +49,9 @@
 .pagination__dots {
   pointer-events: none;
 }
-
+.pagination__item {
+  list-style-type: none;
+}
 @media screen and (max-width: 768px) {
   .pagination {
     font-size: 14px;
