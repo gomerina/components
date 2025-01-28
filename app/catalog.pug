@@ -1,0 +1,27 @@
+doctype html
+html(lang="ru")
+    head
+        include includes/chunk/head
+        include includes/variables
+        title Каталог
+    body 
+        include includes/chunk/header/header
+        main  
+            .top-page 
+                .container 
+                    ul.breadcrumbs 
+                        li.breadcrumbs__item
+                            a(href="#").breadcrumbs__link Главная 
+                        li.breadcrumbs__item Каталог товаров
+                    h1.main-heading 
+                        span.red-color Каталог 
+                        span товаров
+            .page-body 
+                .container 
+                    include includes/sections/catalog-section/catalogSection 
+                    +catalogSection(list, [...catalogSection])
+
+
+
+        include includes/chunk/footer/footer
+        

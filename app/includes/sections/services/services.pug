@@ -1,0 +1,29 @@
+mixin services([...arr])
+    .section.services 
+        .container 
+            h2.main-heading 
+                span.red-color Наши 
+                span Услуги
+            .services__inner.swiper 
+                .swiper-wrapper
+                    each services in arr 
+                        a(href="#").services__item.swiper-slide 
+                            .services__item-head 
+                                picture 
+                                    source(srcset=services.webp, type="image/webp")
+                                    img(src=services.img, alt="")
+                            .services__item-body 
+                                .h4=services.text
+                .sales__controls 
+                    .swiper-button-prev 
+                        <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="8.53033" y1="0.53033" x2="1.25073" y2="7.80993" stroke="black" stroke-width="1.5"/>
+                            <line y1="-0.75" x2="10.2949" y2="-0.75" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 8 14.9993)" stroke="black" stroke-width="1.5"/>
+                        </svg>
+                    .swiper-button-next 
+                        <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="1.46967" y1="14.4697" x2="8.74927" y2="7.19007" stroke="black" stroke-width="1.5"/>
+                            <line y1="-0.75" x2="10.2949" y2="-0.75" transform="matrix(0.707107 0.707107 0.707107 -0.707107 2 0.000732422)" stroke="black" stroke-width="1.5"/>
+                        </svg>
+
+                            

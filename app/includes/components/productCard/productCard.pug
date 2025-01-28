@@ -1,0 +1,31 @@
+mixin productCard(className, [...arr]) 
+    each product in arr 
+        .product-card(class=className) 
+            a(href="#").product-card__head 
+                picture 
+                    source(srcset=product.webp, type="image/webp")
+                    img(src=product.img, alt="") 
+                if(product.flag)
+                    .product-card__flags 
+                        if(product.flag == 'new') 
+                            .product-card__flags-item.new Новинка 
+                        if(product.flag == 'hit')
+                            .product-card__flags-item.hit Хит продаж
+            .product-card__body 
+                .product-card__articule=product.articule 
+                a(href="#").product-card__name=product.name 
+            .product-card__footer 
+                .product-card__price 
+                    p Цена за шт.
+                    .product-card__price-box 
+                        span.product-card__current=product.currentPrice 
+                        if(product.oldPrice)
+                            s.product-card__old=oldPrice
+                .product-card__controls 
+                    include ../../UI/counter/counter
+                    button.btn В корзину
+
+
+        
+
+    

@@ -1,0 +1,16 @@
+mixin catalogSection(list, [...arr])
+    .catalog-section__inner 
+        each catalogSection in arr 
+            .catalog-section__item 
+                .catalog-section__preview 
+                    picture 
+                        source(srcset=catalogSection.webp, type="image/webp")
+                        img(src=catalogSection.img, alt="")
+                .catalog-section__content 
+                    .h5.catalog-section__name=catalogSection.name
+                    ul.catalog-section__list 
+                        each listItem in catalogSection.list
+                            li.catalog-section__list-item 
+                                a(href="#").catalog-section__list-link=listItem 
+                    a(href="#").catalog-section__more 
+                        u Показать больше 

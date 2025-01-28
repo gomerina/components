@@ -1,0 +1,37 @@
+include ../../variables
+.card-tabs.jsTabParent#cardTabs 
+    .card-tabs__head.jsScrollParent 
+        button.card-tabs__head-item.jsTabHead.active Описание
+        button.card-tabs__head-item.jsTabHead#charsTabHead Характеристики
+        button.card-tabs__head-item.jsTabHead Варианты товара
+        button.card-tabs__head-item.jsTabHead Документация
+    .card-tabs__wrapper
+        .card-tabs__body.active.jsTabBody 
+            .card-tabs__body-content.textpage
+                p Описание и фото товара, технические характеристики, информация о комплекте поставки, габаритах, внешнем виде и цвете, стране производства, а также сертификаты и паспорта носят справочный характер и основываются на последних доступных сведениях от производителя. Производитель оставляет за собой право изменить параметры без предварительного уведомления продавца. Предложение не является публичной офертой.р
+        .card-tabs__body#charsTabBody.jsTabBody 
+            .card-tabs__body-content.textpage
+                ul 
+                    li Характеристика 1
+                    li Характеристика 2
+                    li Характеристика 3
+                    li Характеристика 4
+        .card-tabs__body.jsTabBody 
+            .sales__box.swiper 
+                .swiper-wrapper
+                    include ../../components/productCard/productCard 
+                    +productCard('swiper-slide', [...sales])
+            .sales__controls 
+                .swiper-button-prev 
+                    <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="8.53033" y1="0.53033" x2="1.25073" y2="7.80993" stroke="black" stroke-width="1.5"/>
+                        <line y1="-0.75" x2="10.2949" y2="-0.75" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 8 14.9993)" stroke="black" stroke-width="1.5"/>
+                    </svg>
+                .swiper-button-next 
+                    <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1.46967" y1="14.4697" x2="8.74927" y2="7.19007" stroke="black" stroke-width="1.5"/>
+                        <line y1="-0.75" x2="10.2949" y2="-0.75" transform="matrix(0.707107 0.707107 0.707107 -0.707107 2 0.000732422)" stroke="black" stroke-width="1.5"/>
+                    </svg>
+        .card-tabs__body.jsTabBody
+            .card-tabs__body-content
+                p Для реализации данного таба нужен дизайн

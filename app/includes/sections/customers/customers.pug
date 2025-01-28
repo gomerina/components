@@ -1,0 +1,22 @@
+mixin customers([...arr])
+    .section.customers 
+        .container 
+            h2.main-heading 
+                span.red-color Представленные 
+                span Бренды
+        .customers__layout
+            // CSS бегущие строки. Для строки нужен дубликат с aria-hidden="true"
+            .customers__wrapper
+                .customers__items-wrap
+                    .customers__items.marquee
+                        each customers in arr
+                            a(href="#").customers__item 
+                                picture 
+                                    source(srcset=customers.webp, type="image/webp")
+                                    img(src=customers.img, alt="")
+                    .customers__items.marquee(aria-hidden="true")
+                        each customers in arr
+                            a(href="#").customers__item 
+                                picture 
+                                    source(srcset=customers.webp, type="image/webp")
+                                    img(src=customers.img, alt="")

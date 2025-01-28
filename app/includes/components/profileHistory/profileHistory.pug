@@ -1,0 +1,30 @@
+mixin profileHistory([...arr])
+    each history in arr 
+        .profile-history__item 
+            .profile-history__head 
+                b 567890-98766789 
+                .profile-history__group  
+                    p Сумма заказа:
+                    p 
+                        b 18 645 ₽
+                    p 
+                        if(history.headStatus == 'Оплачено')
+                            span.green-color Оплачено
+                        if(history.headStatus == 'Не оплачено')
+                            span.red-color Оплачено
+            .profile-history__body 
+                p Заказ от 26 июня 2021
+                p 
+                    if(history.bodyStatus == 'В работе')
+                        b.blue-color В работе
+                    if(history.bodyStatus == 'Ждёт оплаты')
+                        b.red-color Ждёт оплаты
+                    if(history.bodyStatus == 'Получено')
+                        b.green-color Получено
+                    if(history.bodyStatus == 'Отменено')
+                        b.red-color Отменено
+            a(href="#").btn Подробнее
+
+                    
+
+

@@ -1,0 +1,219 @@
+.basket-table {
+  width: 100%;
+  line-height: normal;
+  border-collapse: collapse;
+  margin: 0 0 30px 0;
+}
+.basket-table a {
+  color: black;
+}
+.basket-table p:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+.basket-table__img {
+  width: 205px;
+  height: 177px;
+  position: relative;
+}
+.basket-table__img a {
+  width: 135px;
+  height: 135px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.basket-table th {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.7;
+  padding: 0 30px 10px 30px;
+  text-align: left;
+}
+.basket-table th:last-child {
+  padding-right: 0;
+}
+.basket-table td {
+  background: #fff;
+  padding: 16px 30px;
+  font-size: 18px;
+  border-bottom: 20px solid #f5f8fd;
+}
+.basket-table b {
+  font-size: 22px;
+}
+.basket-table__name {
+  width: 440px;
+}
+.basket-table .product-card__articule {
+  margin: 0;
+  font-size: 18px;
+}
+
+.basket-total {
+  border-collapse: collapse;
+  width: 353px;
+  font-size: 24px;
+  line-height: normal;
+  margin: 0 0 25px 0;
+}
+.basket-total td {
+  padding: 0 15px 15px 0;
+}
+.basket-total td:last-child {
+  padding-right: 0;
+  text-align: right;
+}
+.basket-total b {
+  font-size: 30px;
+}
+.basket-total__value {
+  color: #1974bf;
+}
+
+.basket-total,
+.basket-btn {
+  width: 353px;
+}
+.basket-total .btn,
+.basket-btn .btn {
+  width: 100%;
+}
+
+@media screen and (max-width: 1630px) {
+  .basket-table__img {
+    width: 150px;
+    height: 160px;
+  }
+  .basket-table__img a {
+    width: 125px;
+    height: 125px;
+  }
+  .basket-table th, .basket-table .product-card__articule {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .basket-table td, .basket-table .product-card__name {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .basket-table b {
+    font-size: 20px;
+  }
+  .basket-table__name {
+    width: 330px;
+  }
+}
+@media screen and (max-width: 1330px) {
+  .basket-table__img {
+    width: 120px;
+    height: 130px;
+  }
+  .basket-table__img a {
+    width: 100px;
+    height: 100px;
+  }
+  .basket-table th, .basket-table .product-card__articule {
+    font-size: 12px;
+    line-height: normal;
+  }
+  .basket-table td, .basket-table .product-card__name {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .basket-table b {
+    font-size: 18px;
+  }
+  .basket-table__name {
+    width: 220px;
+  }
+  .basket-table td {
+    padding: 12px 14px;
+  }
+  .basket-table th {
+    padding: 0 14px 10px 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .basket-table {
+    display: block;
+  }
+  .basket-table tbody {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (2fr)[2];
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+  }
+  .basket-table td, .basket-table tr {
+    display: block;
+    background: #fff;
+  }
+  .basket-table td {
+    border-bottom: 0;
+    padding: 0;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .basket-table td:not(:last-child) {
+    margin: 0 0 15px 0;
+  }
+  .basket-table tr {
+    padding: 10px 20px;
+  }
+  .basket-table tr:first-child {
+    display: none;
+  }
+  .basket-table__name {
+    width: auto;
+  }
+  .basket-table p:not(:last-child) {
+    margin: 0 0 12px 0;
+  }
+  .basket-table__img {
+    padding-top: 56% !important;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+  }
+  .basket-table__img a {
+    width: auto;
+    height: auto;
+  }
+  .basket-box .end-box {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .basket-total,
+  .basket-btn {
+    width: 100%;
+  }
+  .basket-total {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+  }
+  .basket-total b {
+    font-size: 24px;
+  }
+  .basket-total td {
+    padding: 0 10px 10px 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .basket-table tbody {
+    -ms-grid-columns: 4fr;
+    grid-template-columns: 4fr;
+  }
+}

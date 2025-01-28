@@ -1,0 +1,6 @@
+include ../../variables
+    .cards-slider.swiper 
+        .swiper-wrapper 
+            include ../productCard/productCard 
+            +productCard('swiper-slide', [...catalogPage])
+        .swiper-pagination

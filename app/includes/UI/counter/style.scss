@@ -1,0 +1,35 @@
+.counter {
+    display: flex;
+    align-items: center;
+    &__btn {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #1974bf;
+    }
+    &__input {
+        width: 30px;
+        height: 30px;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        background: transparent;
+        pointer-events: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .counter {
+        &__btn {
+            width: 25px;
+            height: 25px;
+        }
+        &__input {
+            width: 25px;
+            height: 25px;
+            font-size: 14px;
+        }
+    }
+}

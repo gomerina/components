@@ -1,0 +1,39 @@
+.services .swiper-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.services__item h4, .services__item .h4 {
+  color: black;
+}
+.services__item-head {
+  position: relative;
+  padding-top: 60.387%;
+  margin: 0 0 10px 0;
+}
+.services__item-head img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    width: calc(100% + 20px);
+  }
+  .services__inner {
+    padding: 0 20px 0 0;
+  }
+  .services .swiper-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0;
+  }
+}

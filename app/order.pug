@@ -1,0 +1,69 @@
+doctype html
+html(lang="ru")
+    head
+        include includes/chunk/head
+        include includes/variables
+        title Оформление заказа
+    body 
+        include includes/chunk/header/header
+        main  
+            .top-page 
+                .container 
+                    ul.breadcrumbs 
+                        li.breadcrumbs__item
+                            a(href="#").breadcrumbs__link Главная 
+                        li.breadcrumbs__item Оформление заказа
+                    h1.main-heading 
+                        span.red-color Оформление 
+                        span заказа
+            .page-body 
+                .container 
+                    form(action="#").basket-box.form
+                        .order-item  
+                            .order-item__inner 
+                                b.order-item__name Товары в заказе
+                            include includes/components/basketTable/basketTable 
+                            +basketTable([...order])
+                        .order-item 
+                            .order-item__inner 
+                                b.order-item__name Адрес доставки 
+                                .form__item 
+                                    p Город*
+                                    input(type="text").form__input.small
+                        .order-item.grid-2 
+                            .order-item__inner 
+                                b.order-item__name Способ оплаты 
+                                include includes/UI/radio/radio 
+                                +radio([...orderPayment])
+                            .order-item__inner 
+                                b.order-item__name Способ доставки
+                                include includes/UI/radio/radio 
+                                +radio([...orderDelivery])
+                        .order-item 
+                            .order-item__inner 
+                                b.order-item__name Информация о покупателе 
+                                .form__layout 
+                                    .form__item 
+                                        p Контактное лицо (ФИО)*
+                                        input(type="text").form__input.small
+                                    .form__item 
+                                        p Компания ИНН
+                                        input(type="text").form__input.small
+                                    .form__item 
+                                        p Телефон*
+                                        input(type="tel").form__input.small.jsTel
+                                    .form__item 
+                                        p E-mail*
+                                        input(type="email").form__input.small
+                        .end-box 
+                            include includes/components/orderAside/orderAside
+
+                                
+
+
+                    
+                    
+
+
+
+        include includes/chunk/footer/footer

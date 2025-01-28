@@ -1,0 +1,89 @@
+include filtersGroup
+aside.catalog-aside.jsCatalogAside 
+    .catalog-row__top.catalog-aside__top Фильтры
+    .catalog-aside__close 
+        button.jsCloseAside
+            <svg width="23" height="22" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="-1" x2="28.6625" y2="-1" transform="matrix(0.684504 0.729009 -0.684504 0.729009 1 2.10474)" stroke="black" stroke-width="2"/>
+                <line y1="-1" x2="28.6625" y2="-1" transform="matrix(0.684504 -0.729009 0.684504 0.729009 2.38086 22.8943)" stroke="black" stroke-width="2"/>
+            </svg>
+
+    .catalog-aside__wrapper
+        .catalog-aside__item.jsTogglerParent
+            .catalog-aside__head.jsTogglerHead 
+                span Цена
+                <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.03033" y1="0.616887" x2="5.88314" y2="5.4697" stroke="black" stroke-width="1.5"/>
+                    <line y1="-0.75" x2="6.86292" y2="-0.75" transform="matrix(-0.707107 0.707107 0.707107 0.707107 10.499 1.14722)" stroke="black" stroke-width="1.5"/>
+                </svg>
+            .catalog-aside__body.jsTogglerBody(style="display: block") 
+                .catalog-aside__range 
+                    .catalog-aside__inputs 
+                        input(type="number" data-min="550").min 
+                        .catalog-aside__separator 
+                            <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="0.5" y1="1" x2="13.4516" y2="1" stroke="black" stroke-opacity="0.3" stroke-width="2"/>
+                            </svg>
+                        input(type="number" data-max="2500").max
+                        span.catalog-aside__rub ₽
+                    .sliders
+        
+        .catalog-aside__item.jsTogglerParent
+            .catalog-aside__body.jsTogglerBody(style="display: block") 
+                include ../../UI/checkbox/checkbox 
+                +checkbox([...mainFilters])
+        .catalog-aside__item.jsTogglerParent
+            .catalog-aside__head.jsTogglerHead 
+                span Бренды
+                <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.03033" y1="0.616887" x2="5.88314" y2="5.4697" stroke="black" stroke-width="1.5"/>
+                    <line y1="-0.75" x2="6.86292" y2="-0.75" transform="matrix(-0.707107 0.707107 0.707107 0.707107 10.499 1.14722)" stroke="black" stroke-width="1.5"/>
+                </svg>
+            .catalog-aside__body.jsTogglerBody
+                include ../../UI/checkbox/checkbox 
+                +checkbox([...brandsFilters])
+        .catalog-aside__item.jsTogglerParent
+            .catalog-aside__head.jsTogglerHead 
+                span Страна
+                <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.03033" y1="0.616887" x2="5.88314" y2="5.4697" stroke="black" stroke-width="1.5"/>
+                    <line y1="-0.75" x2="6.86292" y2="-0.75" transform="matrix(-0.707107 0.707107 0.707107 0.707107 10.499 1.14722)" stroke="black" stroke-width="1.5"/>
+                </svg>
+            .catalog-aside__body.jsTogglerBody
+                include ../../UI/checkbox/checkbox 
+                +checkbox([...brandsFilters])
+        .catalog-aside__item.jsTogglerParent
+            .catalog-aside__head.jsTogglerHead 
+                span Производитель
+                <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.03033" y1="0.616887" x2="5.88314" y2="5.4697" stroke="black" stroke-width="1.5"/>
+                    <line y1="-0.75" x2="6.86292" y2="-0.75" transform="matrix(-0.707107 0.707107 0.707107 0.707107 10.499 1.14722)" stroke="black" stroke-width="1.5"/>
+                </svg>
+            .catalog-aside__body.jsTogglerBody
+                include ../../UI/checkbox/checkbox 
+                +checkbox([...brandsFilters])
+        .catalog-aside__item.jsTogglerParent
+            .catalog-aside__head.jsTogglerHead 
+                span Цвет
+                <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.03033" y1="0.616887" x2="5.88314" y2="5.4697" stroke="black" stroke-width="1.5"/>
+                    <line y1="-0.75" x2="6.86292" y2="-0.75" transform="matrix(-0.707107 0.707107 0.707107 0.707107 10.499 1.14722)" stroke="black" stroke-width="1.5"/>
+                </svg>
+            .catalog-aside__body.jsTogglerBody
+                include ../../UI/checkbox/checkbox 
+                +checkbox([...brandsFilters])
+        .catalog-aside__item.jsTogglerParent
+            .catalog-aside__head.jsTogglerHead 
+                span Размер
+                <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.03033" y1="0.616887" x2="5.88314" y2="5.4697" stroke="black" stroke-width="1.5"/>
+                    <line y1="-0.75" x2="6.86292" y2="-0.75" transform="matrix(-0.707107 0.707107 0.707107 0.707107 10.499 1.14722)" stroke="black" stroke-width="1.5"/>
+                </svg>
+            .catalog-aside__body.jsTogglerBody
+                include ../../UI/checkbox/checkbox 
+                +checkbox([...brandsFilters])
+                        
+    .catalog-aside__buttons 
+        button.btn Показать 150 товаров
+        button.btn.white Сбросить
+

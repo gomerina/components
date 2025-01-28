@@ -1,0 +1,13 @@
+mixin servicesCard(className, [...arr]) 
+    each services in arr 
+        .services-card(class=className) 
+            .services-card__text 
+                .services-card__inner 
+                    h4.services-card__name=services.name 
+                    .services-card__descr 
+                        p=services.descr 
+                    button.btn.jsOpenModal(data-url="modals/feedback.html") Заказать 
+            .services-card__img 
+                picture 
+                    source(srcset=services.webp, type="image/webp")
+                    img(src=services.img, alt="")

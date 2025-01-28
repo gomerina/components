@@ -1,0 +1,6 @@
+mixin radio([...arr])
+    each radio in arr
+        label.control-radio 
+            input(type="radio", name=radio.name).control-radio__input
+            span.control-radio__text=radio.text 
+            

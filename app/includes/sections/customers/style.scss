@@ -1,0 +1,55 @@
+.customers {
+    overflow: hidden;
+    &__item {
+        flex: 0 0 auto;
+        width: 236px;
+        height: 140px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__items {
+        flex-shrink: 0;
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+        min-width: 100%;
+        &-wrap {
+            position: relative;
+            display: flex;
+            gap: 20px;
+            overflow: hidden;
+            user-select: none;
+            &:hover {
+                & .marquee {
+                    animation-play-state: paused;
+                }
+            }
+        }
+    }
+}
+.marquee {
+    animation: scroll 30s linear infinite;
+}
+.reverce {
+    animation-direction: reverse;
+}
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .customers {
+        &__item {
+            width: 188px;
+            height: 112px;
+        }
+    }
+}

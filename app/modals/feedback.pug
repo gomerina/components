@@ -1,0 +1,14 @@
+include ../includes/variables
+.modal 
+    .modal__head 
+        h2 Заказать обратный звонок
+        p Мы перезвоним вам в течение 10 минут
+    form(action="#").form
+        .form__layout.grid-4 
+            input(type="text", name="" placeholder="Имя*").form__input.large
+            input(type="tel", name="" placeholder="Телефон*").form__input.large.jsTel
+            include ../includes/UI/checkbox/checkbox
+            +checkbox([...feedback])
+            button.btn Связаться
+
+    

@@ -1,0 +1,123 @@
+.product-card {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    &__head {
+        padding-top: 101.47%;
+        margin: 0 0 10px 0;
+        position: relative;
+        & img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__body {
+        flex-grow: 1;
+        margin: 0 0 15px 0;
+    }
+    &__articule {
+        font-size: 16px;
+        line-height: normal;
+        margin: 0 0 8px 0;
+        opacity: 0.7;
+    }
+    &__name {
+        font-size: 18px;
+        line-height: 23px;
+        color: #1974bf;
+        display: block;
+    }
+    &__price {
+        margin: 0 0 20px 0;
+        font-size: 16px;
+        line-height: normal;
+        &-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 5px 0 0 0;
+        }
+        & p {
+            opacity: 0.7;
+        }
+    }
+    & .btn {
+        flex-grow: 1;
+        padding: 16px 10px;
+    }
+    &__current {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: normal;
+    }
+    &__flags {
+        position: absolute;
+        top: -7px;
+        right: -5px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        &-item {
+            font-size: 12px;
+            line-height: normal;
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 8px;
+            &.new {
+                background: #159a19;
+            }
+            &.hit {
+                background: #1974bf;
+            }
+        }
+    }
+    &__controls {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-card {
+        padding: 16px 15px;
+        &__articule {
+            font-size: 14px;
+            margin: 0 0 5px 0;
+        }
+        &__flags {
+            top: 0;
+            right: 0;
+        }
+        &__price {
+            margin: 0 0 15px 0;
+        }
+        & .btn {
+            padding: 14px 10px;
+        }
+        &__name {
+            font-size: 16px;
+            line-height: normal;
+        }
+        &__controls {
+            gap: 18px;
+        }
+        &__price {
+            font-size: 14px;
+            &-box {
+                margin: 5px 0 0 0;
+            }
+        }
+        &__current {
+            font-size: 20px;
+        }
+    }
+}

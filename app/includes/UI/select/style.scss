@@ -1,0 +1,34 @@
+.jq-selectbox {
+    &__select {
+        height: 21px;
+        border: none !important;
+        border-radius: 0;
+        background: transparent !important;
+        box-shadow: none !important;
+        font: 18px / 22px Inter;
+        padding: 0 25px 0 0;
+        width: 160px;
+    }
+    &.opened {
+        & .jq-selectbox__trigger {
+            transform: rotate(-180deg) translateY(-2px);
+        }
+    }
+    &__trigger {
+        width: 10px;
+        border-left: none;
+        background: url(../img/svg/select-chev.svg) no-repeat center;
+        &-arrow {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .jq-selectbox {
+        &__select {
+            font: 14px / 18px Inter;
+            height: 18px;
+            width: 140px;
+        }
+    }
+}

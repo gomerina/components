@@ -1,0 +1,34 @@
+doctype html
+html(lang="ru")
+    head
+        include includes/chunk/head
+        include includes/variables
+        title Вход
+    body 
+        include includes/chunk/header/header
+        main  
+            .auth 
+                .container 
+                    h1.text-center.main-heading
+                        span Авторизация
+                    .auth__inner 
+                        .auth__head 
+                            a(href="#").auth__head-item.current Вход
+                            a(href="#").auth__head-item Регистрация 
+                        form(action="#").form
+                            .form__layout.grid-4 
+                                .form__item
+                                    input(type="email", placeholder="E-mail*").form__input.large
+                                .form__item 
+                                    input(type="password", placeholder="Пароль*").form__input.large
+                                .form__row 
+                                    include includes/UI/checkbox/checkbox 
+                                    +checkbox([...enter])
+                                    a(href="#")
+                                        u Забыли пароль? 
+                                button.btn Войти
+                    
+
+
+
+        include includes/chunk/footer/footer

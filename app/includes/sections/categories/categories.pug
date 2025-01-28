@@ -1,0 +1,11 @@
+mixin categories([...arr])
+    .categories 
+        each categories in arr 
+            a(href="#").categories__item
+                .categories__item-img 
+                    picture 
+                        source(srcset=categories.webp, type="image/webp")
+                        img(src=categories.img, alt="")
+                .categories__item-text 
+                    .categories__item-name=categories.name 
+                    .categories__item-value=categories.value

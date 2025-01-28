@@ -1,0 +1,43 @@
+doctype html
+html(lang="ru")
+    head
+        include includes/chunk/head
+        include includes/variables
+        title Корзина
+    body 
+        include includes/chunk/header/header
+        main  
+            .top-page 
+                .container 
+                    ul.breadcrumbs 
+                        li.breadcrumbs__item
+                            a(href="#").breadcrumbs__link Главная 
+                        li.breadcrumbs__item Корзина
+                    h1.main-heading 
+                        span Корзина
+            .page-body 
+                .container 
+                    .basket-box
+                        include includes/components/basketTable/basketTable 
+                        +basketTable([...basket])
+                        
+                        .end-box 
+                            table.basket-total 
+                                tr 
+                                    td Всего товаров:
+                                    td 5 
+                                tr 
+                                    td 
+                                        b Итого: 
+                                    td 
+                                        b.basket-total__value 17 645 ₽ 
+                        .end-box
+                            .basket-btn 
+                                a(href="#").btn Оформить заказ
+
+                    
+                    
+
+
+
+        include includes/chunk/footer/footer

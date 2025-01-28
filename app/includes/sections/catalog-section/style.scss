@@ -1,0 +1,132 @@
+.catalog-section {
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    &__item {
+        display: flex;
+        gap: 20px;
+        padding: 30px 26px 18px 18px;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        min-height: 263px;
+    }
+    &__preview {
+        width: 132px;
+        position: relative;
+        flex-shrink: 0;
+        display: block;
+        & img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+    &__more {
+        font-size: 16px;
+        line-height: normal;
+    }
+    & a {
+        transition: 0.3s ease-in-out;
+        &:hover {
+            color: #1974bf;
+        }
+    }
+    & u {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &__list {
+        margin: 0 0 20px 0;
+        flex-grow: 1;
+        font-size: 14px;
+        line-height: normal;
+        &-item {
+            &:not(:last-child) {
+                margin: 0 0 5px 0;
+            }
+        }
+    }
+    &__name {
+        margin: 0 0 20px 0;
+    }
+}
+@media screen and (max-width: 1630px) {
+    .catalog-section {
+        &__inner {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &__item {
+            gap: 15px;
+            padding: 25px 20px 16px 16px;
+            min-height: 263px;
+        }
+        &__preview {
+            width: 112px;
+        }
+        &__more {
+            font-size: 15px;
+        }
+        &__list {
+            margin: 0 0 15px 0;
+        }
+        &__name {
+            margin: 0 0 15px 0;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .catalog-section {
+        &__inner {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__item {
+            display: flex;
+            gap: 15px;
+            padding: 25px 20px 16px 16px;
+            min-height: 263px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .catalog-section {
+        &__item {
+            flex-direction: column;
+            padding: 10px 8px 16px 8px;
+        }
+        &__name {
+            margin: 0 0 10px 0;
+        }
+        &__inner {
+            gap: 10px;
+        }
+        &__list {
+            font-size: 12px;
+        }
+        &__content {
+            flex-grow: 1;
+        }
+        &__more {
+            font-size: 14px;
+        }
+        &__preview {
+            padding-top: 49%;
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 360px) {
+    .catalog-section {
+        &__inner {
+            grid-template-columns: 4fr;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+mixin checkbox([...arr])
+    each checkbox in arr
+        label.control-checkbox 
+            input(type="checkbox").control-checkbox__input
+            span.control-checkbox__text!=checkbox.text 
+            if(checkbox.value)
+                span.control-checkbox__value=checkbox.value
+        

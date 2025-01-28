@@ -1,0 +1,33 @@
+doctype html
+html(lang="ru")
+    head
+        include includes/chunk/head
+        include includes/variables
+        title Услуги 2
+    body 
+        include includes/chunk/header/header
+        main  
+            .top-page 
+                .container 
+                    ul.breadcrumbs 
+                        li.breadcrumbs__item
+                            a(href="#").breadcrumbs__link Главная 
+                        li.breadcrumbs__item О компании
+                    h1.main-heading
+                        span.red-color Наши 
+                        span Услуги
+            .page-body 
+                .container 
+                    .services-layout.grid-4
+                        include includes/components/servicesCard/servicesCard 
+                        +servicesCard('vertical', [...serivcesPage])
+                
+
+                    
+
+                    
+
+
+
+        include includes/chunk/footer/footer
+        

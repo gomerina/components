@@ -1,0 +1,55 @@
+doctype html
+html(lang="ru")
+    head
+        include includes/chunk/head
+        include includes/variables
+        title Главная
+    body 
+        include includes/chunk/header/header
+        main  
+            .main-screen 
+                .container
+                    .main-screen__inner 
+                        include includes/components/mainAside/mainAside
+                        +mainAside('', list, [...mainSidebar])
+                        .main-screen__content 
+                            include includes/components/mainSlider/mainSlider
+                            +mainSlider([...mainScreenSlider])
+                            .sales 
+                                h2.main-heading 
+                                    span.red-color хиты 
+                                    span продаж 
+                                .sales__box.swiper 
+                                    .swiper-wrapper
+                                        include includes/components/productCard/productCard 
+                                        +productCard('swiper-slide', [...sales])
+                                    .sales__controls 
+                                        .swiper-button-prev 
+                                            <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <line x1="8.53033" y1="0.53033" x2="1.25073" y2="7.80993" stroke="black" stroke-width="1.5"/>
+                                                <line y1="-0.75" x2="10.2949" y2="-0.75" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 8 14.9993)" stroke="black" stroke-width="1.5"/>
+                                            </svg>
+                                        .swiper-button-next 
+                                            <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <line x1="1.46967" y1="14.4697" x2="8.74927" y2="7.19007" stroke="black" stroke-width="1.5"/>
+                                                <line y1="-0.75" x2="10.2949" y2="-0.75" transform="matrix(0.707107 0.707107 0.707107 -0.707107 2 0.000732422)" stroke="black" stroke-width="1.5"/>
+                                            </svg> 
+            .section.catalog-section 
+                .container 
+                    h2.main-heading 
+                        span.red-color Каталог 
+                        span товаров
+                    include includes/sections/catalog-section/catalogSection 
+                    +catalogSection(list, [...catalogSection])
+            include includes/sections/services/services 
+            +services([...services])
+            include includes/sections/main-about/main-about
+            include includes/sections/advantages/advantages 
+            +advantages([...advantages])
+            include includes/sections/customers/customers
+            +customers([...customers])
+
+
+
+        include includes/chunk/footer/footer
+        

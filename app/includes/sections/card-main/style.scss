@@ -1,0 +1,228 @@
+.card-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 51px;
+    margin: 0 0 50px 0;
+}
+.card-sliders {
+    width: 789px;
+    flex-shrink: 0;
+    display: flex;
+    gap: 50px;
+}
+.vertical-slider-box {
+    width: 139px;
+    flex-shrink: 0;
+    & .vertical-next,
+    & .vertical-prev {
+        position: static;
+        transform: none;
+        margin: 14px auto 0 auto;
+        border-radius: 0;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+        &:hover {
+            background: #1974bf;
+            border-color: #1974bf;
+            & path {
+                stroke: #fff;
+            }
+        }
+        & path {
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
+.vertical-slider {
+    height: 631px;
+    &__item {
+        background: #fff;
+        padding: 8px;
+        cursor: pointer;
+        & img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+        }
+    }
+}
+.big-slider {
+    width: 600px;
+    height: 631px;
+    background: #fff;
+    & .swiper-pagination {
+        display: none;
+        position: static;
+        margin: 15px 0 0 0;
+    }
+    & img {
+        max-width: 85%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.card-content {
+    flex-grow: 1;
+    max-width: 700px;
+    &__price {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin: 0 0 15px 0;
+    }
+    & .product-card__current {
+        color: #ff0000;
+        font-size: 30px;
+        line-height: normal;
+        font-weight: 700;
+    }
+    & .product-card__controls {
+        margin: 20px 0 60px 0;
+        & .btn {
+            min-width: 287px;
+        }
+    }
+    &__btn {
+        color: #1974bf;
+        font-size: 18px;
+    }
+    &__table {
+        border-collapse: collapse;
+        width: 100%;
+        line-height: normal;
+        margin: 0 0 20px 0;
+        & tr {
+            vertical-align: top;
+            &:last-child {
+                & td {
+                    padding-bottom: 0;
+                }
+            }
+        }
+        & td {
+            font-size: 18px;
+            padding-bottom: 15px;
+            &:first-child {
+                font-weight: 700;
+                text-transform: uppercase;
+                padding-right: 50px;
+                width: 283px;
+            }
+        }
+    }
+    &__available {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            &.success {
+                color: #159a19;
+            }
+            &.fail {
+                color: #c21616;
+            }
+            & svg {
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1630px) {
+    .vertical-slider {
+        height: 500px;
+    }
+    .card-main {
+        gap: 24px;
+    }
+    .card-content {
+        & .product-card__controls {
+            margin: 20px 0 30px 0;
+        }
+        &__table {
+            & td {
+                font-size: 16px;
+                padding-bottom: 12px;
+            }
+        }
+    }
+    .card-sliders {
+        gap: 20px;
+        width: 648px;
+    }
+    .big-slider {
+        width: 500px;
+        height: 500px;
+    }
+}
+@media screen and (max-width: 1330px) {
+    .vertical-slider {
+        height: 286px;
+    }
+    .big-slider {
+        width: 286px;
+        height: 286px;
+    }
+    .card-sliders {
+        width: 448px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .vertical-slider-box {
+        display: none;
+    }
+    .card-content {
+        & .btn {
+            flex-grow: 1;
+            min-width: unset;
+        }
+        &__btn {
+            font-size: 14px;
+        }
+        & .product-card__current {
+            font-size: 22px;
+        }
+        &__table {
+            & tr {
+                & td {
+                    font-size: 13px;
+                    &:first-child {
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .card-main {
+        display: block;
+    }
+    .card-sliders {
+        width: auto;
+        display: block;
+    }
+    .big-slider {
+        width: auto;
+        height: auto;
+        margin: 0 0 30px 0;
+        background: transparent;
+        &__item {
+            padding-top: 56%;
+            background: #fff;
+        }
+        & .swiper-pagination {
+            display: block;
+        }
+    }
+}

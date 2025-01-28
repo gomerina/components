@@ -1,0 +1,64 @@
+include card-main-data
+.card-main 
+    .card-sliders 
+        .vertical-slider-box 
+            .vertical-slider.swiper
+                .swiper-wrapper 
+                    each item in verticalSlider
+                        .vertical-slider__item.swiper-slide 
+                            picture 
+                                source(srcset=item.webp, type="image/webp")
+                                img(src=item.img, alt="")
+            button.vertical-next 
+                <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 2.00012L11.1794 9.96194L0.959962 2.00012" stroke="#40444B" stroke-width="3"/>
+                </svg>
+        .big-slider.swiper 
+            .swiper-wrapper 
+                each item in bigSlider 
+                    a(href="img/big-card.jpg" data-fancybox="big-card").big-slider__item.swiper-slide 
+                        picture     
+                            source(srcset="img/webp/big-card.webp", type="image/webp")
+                            img(src="img/big-card.jpg", alt="")
+            .swiper-pagination
+    .card-content 
+        .card-content__price 
+            span.product-card__current 15 000 ₽
+            .card-content__available 
+                .card-content__available-item.success 
+                    span Товар в наличии
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.5 8.125L5.625 11.25L12.5 4.375" stroke="#159A19" stroke-linecap="square"/>
+                    </svg>
+                .card-content__available-item.fail 
+                    span Товара нет в наличии
+        .product-card__articule Арт.: КШ.Ф.П.040.40-01 
+        .product-card__controls 
+            include ../../UI/counter/counter
+            button.btn В корзину
+        table.card-content__table 
+            tr 
+                td Бренд
+                td Aquasfera
+            tr 
+                td Инженерная система
+                td Водоснабжение, Отопление, Тепловые пункты
+            tr 
+                td Тип присоединения
+                td внутренняя резьба
+            tr 
+                td Тип затвора
+                td рычаг
+            tr 
+                td Цвет ручки/бабочки
+                td белый
+            tr 
+                td Тип прохода
+                td полнопроходной
+            tr 
+                td Тип
+                td шаровой
+        a(href="#cardTabs").card-content__btn.jsAllChars 
+            u Все характеристики
+
+

@@ -1,0 +1,117 @@
+.card-tabs {
+  margin: 0 0 70px 0;
+}
+.card-tabs__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 0 0 40px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.card-tabs__head-item {
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+  font-size: 20px;
+  font-weight: 400;
+}
+.card-tabs__head-item::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #1974bf;
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+  display: none;
+}
+.card-tabs__head-item.active {
+  -webkit-text-stroke: 0.6px #1974bf;
+  color: #1974bf;
+}
+.card-tabs__head-item.active::after {
+  display: block;
+}
+.card-tabs__body {
+  display: none;
+  font-size: 18px;
+  line-height: 25px;
+}
+.card-tabs__body-content {
+  max-width: 915px;
+}
+.card-tabs__body.active {
+  display: block;
+  -webkit-animation: fade 0.3s ease-in-out;
+  animation: fade 0.3s ease-in-out;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .card-tabs {
+    margin: 0 0 60px 0;
+  }
+  .card-tabs__head {
+    overflow-x: auto;
+    overflow-y: visible;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 0;
+    gap: 0;
+    border: none;
+    margin: 0 0 30px 0;
+  }
+  .card-tabs__head::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .card-tabs__head-item {
+    font-size: 16px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 0 13px 10px 13px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .card-tabs__head-item:last-child {
+    padding-right: 0;
+  }
+  .card-tabs__head-item::after {
+    content: none;
+  }
+  .card-tabs__head-item.active {
+    border-bottom: 1px solid #1974bf;
+  }
+  .card-tabs__body {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-tabs__body .sales__box {
+    width: calc(100% + 20px);
+  }
+}

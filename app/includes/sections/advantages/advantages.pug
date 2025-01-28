@@ -1,0 +1,13 @@
+mixin advantages([...arr])
+    .section.advantages 
+        .container 
+            h2.main-heading 
+                span.red-color наши 
+                span преимущества 
+            .advantages__inner 
+                each advantages in arr 
+                    .advantages__item 
+                        .advantages__item-head 
+                            img(src=advantages.img, alt="")
+                        .advantages__item-body 
+                            p=advantages.descr

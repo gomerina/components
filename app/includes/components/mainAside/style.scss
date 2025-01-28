@@ -1,0 +1,93 @@
+.main-aside {
+    width: 379px;
+    flex-shrink: 0;
+    background: #fff;
+    font-size: 16px;
+    line-height: 21px;
+    & svg {
+        flex-shrink: 0;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        gap: 15px;
+        padding: 20px 15px;
+        &:hover {
+            & .main-aside__submenu {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+        & a {
+            color: black;
+            transition: 0.3s ease-in-out;
+            &:hover {
+                color: #1974bf;
+            }
+        }
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        }
+    }
+    &__group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        flex-grow: 1;
+        &-inner {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 320px;
+        }
+    }
+    &__icon {
+        width: 30px;
+        flex-shrink: 0;
+    }
+    &__submenu {
+        position: absolute;
+        left: 100%;
+        top: -1px;
+        padding: 15px;
+        z-index: 10;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        background: #fff;
+        width: 447px;
+        transition: 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        & li {
+            &:not(:last-child) {
+                margin: 0 0 10px 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1630px) {
+    .main-aside {
+        width: 280px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+@media screen and (max-width: 1330px) {
+    .main-aside {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main-aside {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+}

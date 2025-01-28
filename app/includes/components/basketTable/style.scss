@@ -1,0 +1,218 @@
+.basket-table {
+    width: 100%;
+    line-height: normal;
+    border-collapse: collapse;
+    margin: 0 0 30px 0;
+    & a {
+        color: black;
+    }
+    & p:not(:last-child) {
+        margin: 0 0 20px 0;
+    }
+
+    &__img {
+        width: 205px;
+        height: 177px;
+        position: relative;
+        & a {
+            width: 135px;
+            height: 135px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    & th {
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0.7;
+        padding: 0 30px 10px 30px;
+        text-align: left;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    & td {
+        background: #fff;
+        padding: 16px 30px;
+        font-size: 18px;
+        border-bottom: 20px solid #f5f8fd;
+    }
+    & b {
+        font-size: 22px;
+    }
+    &__name {
+        width: 440px;
+    }
+    & .product-card__articule {
+        margin: 0;
+        font-size: 18px;
+    }
+}
+.basket-total {
+    border-collapse: collapse;
+    width: 353px;
+    font-size: 24px;
+    line-height: normal;
+    margin: 0 0 25px 0;
+    & td {
+        padding: 0 15px 15px 0;
+        &:last-child {
+            padding-right: 0;
+            text-align: right;
+        }
+    }
+    & b {
+        font-size: 30px;
+    }
+    &__value {
+        color: #1974bf;
+    }
+}
+.basket-total,
+.basket-btn {
+    width: 353px;
+    & .btn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1630px) {
+    .basket-table {
+        &__img {
+            width: 150px;
+            height: 160px;
+            & a {
+                width: 125px;
+                height: 125px;
+            }
+        }
+        & th,
+        & .product-card__articule {
+            font-size: 14px;
+            line-height: normal;
+        }
+        & td,
+        & .product-card__name {
+            font-size: 16px;
+            line-height: normal;
+        }
+        & b {
+            font-size: 20px;
+        }
+        &__name {
+            width: 330px;
+        }
+    }
+}
+@media screen and (max-width: 1330px) {
+    .basket-table {
+        &__img {
+            width: 120px;
+            height: 130px;
+            & a {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        & th,
+        & .product-card__articule {
+            font-size: 12px;
+            line-height: normal;
+        }
+        & td,
+        & .product-card__name {
+            font-size: 14px;
+            line-height: normal;
+        }
+        & b {
+            font-size: 18px;
+        }
+        &__name {
+            width: 220px;
+        }
+        & td {
+            padding: 12px 14px;
+        }
+        & th {
+            padding: 0 14px 10px 14px;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .basket-table {
+        display: block;
+
+        & tbody {
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            gap: 20px;
+        }
+        & td,
+        & tr {
+            display: block;
+            background: #fff;
+        }
+        & td {
+            border-bottom: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:not(:last-child) {
+                margin: 0 0 15px 0;
+            }
+        }
+        & tr {
+            padding: 10px 20px;
+        }
+        & tr:first-child {
+            display: none;
+        }
+        &__name {
+            width: auto;
+        }
+        & p:not(:last-child) {
+            margin: 0 0 12px 0;
+        }
+        &__img {
+            padding-top: 56% !important;
+            height: auto;
+            width: auto;
+            margin: 0 auto;
+            & a {
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+    .basket-box {
+        & .end-box {
+            justify-content: flex-start;
+        }
+    }
+    .basket-total,
+    .basket-btn {
+        width: 100%;
+    }
+    .basket-total {
+        font-size: 18px;
+        margin: 0 0 20px 0;
+        & b {
+            font-size: 24px;
+        }
+        & td {
+            padding: 0 10px 10px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .basket-table {
+        & tbody {
+            grid-template-columns: 4fr;
+        }
+    }
+}
